@@ -1,0 +1,8 @@
+Situation:
+During the operational and financial review for the period from January 2026 to June 2026, Mamaearth evaluated its regional sales performance. Initial reporting indicated a raw total revenue before cleaning of Rs 99,860.20. Based on these unadjusted figures, January 2026 only looked like the peak at Rs 29,582.10, suggesting strong early-year momentum for the brand.
+
+Complication:
+A detailed data audit revealed that the raw revenue was overstated by duplicate orders of Rs 2,501.90. Furthermore, the initial January 2026 peak was distorted by two bulk outlier orders. Operationally, high return rates threaten regional margins. The return rate by payment method is COD 44.4%, CARD 14.7%, and UPI 18.9%. The highest-risk segment is COD in Tier-2 cities, which has a return rate of 54.5%.
+
+Resolution:
+To ensure accurate planning, finance has reconciled the data to establish a cleaned total revenue of Rs 97,358.30. The corrected revenue for January 2026 is Rs 11,637.10. Consequently, March 2026 is identified as the true peak month at Rs 20,318.90. Regional ops and finance heads must now design targeted interventions to address the COD in Tier-2 cities segment at 54.5% and align inventory with the true March 2026 peak.
