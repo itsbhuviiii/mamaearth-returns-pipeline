@@ -14,6 +14,7 @@ No layer reports a number it did not compute itself or receive from the layer be
 
 ```
 ├── README.md
+├── .gitignore              # keeps notebooks/checkpoints out of the repo
 ├── sql/
 │   ├── schema.sql          # creates the database and 3 tables
 │   ├── seed_data.sql       # INSERT statements for all rows (blank cells become NULL)
@@ -34,6 +35,27 @@ No layer reports a number it did not compute itself or receive from the layer be
     ├── generate_narrative.py   # Gemini narrator + offline fallback + accuracy checker
     └── sample_output.txt       # one real Gemini output, verified by the checker
 ```
+
+## How the layers connect
+
+```
+data/*.csv  ──►  Layer 1: SQL (sql/)  ──►  raw revenue Rs 99,860.20 (Report a)
+     │                                              │ (reconciliation baseline)
+     └──────►  Layer 2: Python (analysis/)  ◄───────┘
+                     │  cleans, analyses, charts
+                     ▼
+              narrator/findings.json   (written by code, never hand-typed)
+                     │
+                     ▼
+              Layer 3: Narrator (narrator/generate_narrative.py)
+                     │
+                     ▼
+              SCR business narrative (+ 5-figure accuracy check)
+```
+
+**Run order:** 1) `sql/schema.sql` → `sql/seed_data.sql` → `sql/reports.sql` (MySQL Workbench)
+→ 2) `python analysis/clean_and_eda.py` → `python analysis/visualize.py`
+→ 3) `python narrator/generate_narrative.py`
 
 ## Setup
 
